@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raysa Nadif Oktavian</title>
+    <style>
+        body {
+            background: url("c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/FOTO DUIT.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #0077cc;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #7EC2E9;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        input, textarea, select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #ff6600;
+        }
+
+        /* Jam digital */
+        #clock {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="200" align="center">
+        <tr>
+            <td>
+                <!--banner-->
+                <img src="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/PTS.jpg" width="100%">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- Jam Digital -->
+                <div id="clock"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="menu">
+                <!--menu-->
+                <center>
+                    <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/index.html">HOME</a> |
+                    <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/UAS GALLERY.html">GALLERY</a> |
+                    <a href="UAS CONTACT US.html">CONTACT US</a> |
+                    <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/UAS ABOUT US.html">ABOUT US</a>
+                </center>
+                <!--menu-->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!--content-->
+                <h2>CONTACT US</h2>  
+                <form method="post" action="">
+                    <table align="center" cellspacing="10" border="1">
+                        <tr>
+                            <td>Nama</td>
+                            <td>
+                                <input type="text" name="Nama" size="40" placeholder="Masukkan Nama Anda" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td>
+                                <textarea cols="40" rows="3" name="Alamat" placeholder="Masukkan Alamat Anda" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kota</td>
+                            <td>
+                                <select name="Kota">
+                                    <option>Depok</option>    
+                                    <option>Jakarta Pusat</option> 
+                                    <option>Bogor</option> 
+                                    <option>Jakarta Selatan</option> 
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>
+                                <input type="radio" name="JenisKelamin" value="Laki-Laki" required> Laki-Laki
+                                <input type="radio" name="JenisKelamin" value="Perempuan" required> Perempuan
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pekerjaan</td>
+                            <td>
+                                <input type="checkbox" name="Pekerjaan" value="Polri"> Polri
+                                <input type="checkbox" name="Pekerjaan" value="TNI"> TNI
+                                <input type="checkbox" name="Pekerjaan" value="Arsitektur"> Arsitektur
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hobby</td>
+                            <td>
+                                <input type="checkbox" name="Hobby" value="Futsal"> Futsal
+                                <input type="checkbox" name="Hobby" value="Badminton"> Badminton
+                                <input type="checkbox" name="Hobby" value="Kulineran"> Kulineran
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Upload File</td>
+                            <td>
+                                <input type="file" name="UploadFile" size="20" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input type="submit" name="Submit" value="Kirim">
+                                <input type="reset" name="Reset" value="Reset">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <!--content-->
+            </td>
+        </tr>
+        <tr>
+            <td class="footer">
+                <!--footer-->
+                &copy;copyright - [Raysa Nadif Oktavian] [251011701048] [01SIFP013] 
+                <!--footer-->
+            </td>
+        </tr>
+    </table>
+
+    <!-- JavaScript -->
+    <script>
+        // Jam Digital
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Efek klik menu
+        const menuLinks = document.querySelectorAll('.menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                alert("Anda memilih menu: " + this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

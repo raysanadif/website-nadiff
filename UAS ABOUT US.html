@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raysa Nadif Oktavian</title>
+  <style>
+    body {
+      background: url("c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/FOTO DUIT.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+      margin: 0 10px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .menu a:hover {
+      color: #ff6600;
+      transform: scale(1.1);
+    }
+
+    .footer {
+      background-color: #7EC2E9;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    /* Jam digital */
+    #clock {
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+      background: #f0f0f0;
+      padding: 8px 15px;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <table border="1" width="500" align="center">
+    <tr>
+      <td>
+        <img src="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/PTS.jpg" width="100%" align="center">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <!-- Jam Digital -->
+        <div id="clock"></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="menu">
+        <!--menu-->
+        <center>
+           <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/index.html">HOME</a> |
+          <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/UAS GALLERY.html">GALLERY</a> |
+          <a href="UAS CONTACT US.html">CONTACT US</a> |
+          <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/UAS ABOUT US.html">ABOUT US</a>
+        </center>
+        <!--menu-->
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <u>
+            Korupsi adalah musuh bersama bangsa. Pemberantasannya tidak hanya tanggung jawab pemerintah, tetapi juga seluruh lapisan masyarakat. Dengan kejujuran, integritas, dan kepedulian bersama, Indonesia dapat menjadi negara yang bersih dan berkeadilan.
+          </u>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer">
+        <!--footer-->
+        &copy;copyright - [Raysa Nadif Oktavian] [251011701048] [01SIFP013]
+        <!--footer-->
+      </td>
+    </tr>
+  </table>
+
+  <!-- JavaScript -->
+  <script>
+    // Jam Digital dengan tanggal
+    function updateClock() {
+      const now = new Date();
+      const days = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+      const months = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+      let dayName = days[now.getDay()];
+      let day = now.getDate();
+      let month = months[now.getMonth()];
+      let year = now.getFullYear();
+      let hours = now.getHours().toString().padStart(2, '0');
+      let minutes = now.getMinutes().toString().padStart(2, '0');
+      let seconds = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById('clock').textContent = 
+        dayName + ", " + day + " " + month + " " + year + " - " + hours + ":" + minutes + ":" + seconds;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Efek klik menu
+    const menuLinks = document.querySelectorAll('.menu a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        alert("Anda memilih menu: " + this.textContent);
+      });
+    });
+  </script>
+</body>
+</html>

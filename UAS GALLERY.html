@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raysa Nadif Oktavian</title>
+    <style>
+        body {
+            background: url("c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/FOTO DUIT.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #0077cc;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #7EC2E9;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        img {
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+        }
+
+        /* Jam digital */
+        #clock {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="800" align="center">
+        <tr>
+            <td>
+                <img src="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/PTS.jpg" width="100%">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- Jam Digital -->
+                <div id="clock"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="menu">
+                <center>
+                    <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/index.html">HOME</a> |
+                    <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/UAS GALLERY.html">GALLERY</a> |
+                    <a href="UAS CONTACT US.html">CONTACT US</a> |
+                    <a href="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/UAS ABOUT US.html">ABOUT US</a>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/koruptor.jpeg" width="80%">
+                <p>  Penjelasan Khalid Kembalikan Uang ke KPK</p>
+<p>Pengembalian uang ini sendiri awalnya diungkapkan oleh Khalid Basalamah. Dia menyampaikan telah mengembalikan uang kepada pihak KPK melalui wawancara di salah satu podcast. 
+                </p>
+            </td>
+            <td>
+                <img src="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/korupsi pertamina.jpeg" width="80%">
+                <p> Pertamina bantah tuduhan oplos pertalite & pertamax dalam kasus di kejagung</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/timah.jpeg" width="80%">
+                <p> Barang Bukti Uang Tunai Dari Korupsi Timah</p>
+            </td>
+            <td>
+                <img src="c:/Users/Lenovo Ideapad/Documents/PEMROGRAMAN/pertamina.jpg" width="80%">
+                <p>Foto tersangka kasus pengoplosan BBM pertalie & pertamax</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="footer" colspan="2">
+                &copy; copyright - [Raysa Nadif Oktavian] [251011701048] [01SIFP013]
+            </td>
+        </tr>
+    </table>
+
+    <!-- JavaScript Jam -->
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds;
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // panggil sekali agar langsung tampil
+    </script>
+</body>
+</html>
